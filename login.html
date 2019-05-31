@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+	<script>
+	function validateForm() {
+		var z = document.getElementById("email").value;
+		atpos = z.indexOf("@");
+		dotpos = z.lastIndexOf(".");
+		if (atpos < 1 || ( dotpos - atpos < 2)) {
+			alert("Please enter correct email Id")
+			return false ;
+		}
+		else if (z == "") {
+			alert("email need to be filled out");
+			return false;
+		}
+		var p1 = document.getElementById("pass1").value;
+	}
+	</script>	
+</head>
+<body>
+<div class ="header">
+	<h1>Book store</h1>
+	<p>get easy access to ebooks</p>
+</div>
+<div class="topnav">
+	<a href="1.html">Home</a>
+	<a href="about.html">About Us</a>
+	<a href="science.html">Science</a>
+	<a href="literature.html">Literature</a>
+	<a style="float:right" href="signup.html">Sign Up</a>
+	
+</div>
+<div class="row">
+  <div class="leftcolumn">
+	</br></br>
+	<h1>Login To your Account</h1>
+	</br></br>
+	<div class="formdiv">
+   <form>
+Email id: <br><input type="text" id="email"><br>
+Password: <br><input type="password" id="pass1"><br>	
+<center><input type="submit" value="Submit" onClick="validateForm()"></center>
+  </div>
+	
+
+
+
+</body>
+</html>

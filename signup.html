@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <link rel="stylesheet" type="text/css" href="style1.css">
+<script>
+function validateForm() {
+  var x = document.getElementById("fname").value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  var y = document.getElementById("lname").value;
+  if (y<0 || y>100 || y==" ")
+  {
+    alert("Invalid lname");
+    return false;
+  }
+var z = document.getElementById("email").value;
+atpos = z.indexOf("@");
+dotpos = z.lastIndexOf(".");
+if (atpos < 1 || ( dotpos - atpos < 2 )) {
+alert("Please enter correct email Id")
+return false;} 
+else if (z == "") {
+    alert("email No be filled out");
+    return false;
+  } 
+var p1 = document.getElementById("pass1").value;
+var p2 = document.getElementById("pass2").value;
+  if (p1!=p2) {
+    alert("Password Doesn't match");
+    return false;
+  }
+else if(p1=="" || p2=="")
+{
+alert("Invalid Password");
+    return false;
+}
+}
+</script>
+</head>
+<body>
+<div class="header">
+  <h1>Book Store</h1>
+  <p>get easy access to ebooks</p>
+</div>
+
+<div class="topnav">
+<a href="1.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="science.html">Science</a>
+<a href="literature.html">Literature</a>
+<a style="float:right" href="login.html">Login</a>
+  
+</div>
+<div class="row">
+  <div class="leftcolumn">
+  </br></br>
+  <h1>Create your Account</h1>
+  </br></br>
+  <div class="formdiv">
+   <form>
+First Name    :<br> <input type="text" id="fname"><br>
+Last Name: <br><input type="text" id="lname"><br>
+Email id: <br><input type="text" id="email"><br>
+Password: <br><input type="password" id="pass1"><br>
+Retype Password: <br><input type="password" id="pass2"><br><br>
+<center><input type="submit" value="Submit" onClick="validateForm()"></center>
+  </div>
+  </div>
+</form>
+
+</body>
+</html>
